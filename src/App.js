@@ -1,27 +1,25 @@
 import React, {Component} from 'react';
-import './App.css'
 class App extends Component {
   
+  state = { 
+    counter: 0
+  }
+
+  increment =() => {
+    this.setState({counter: this.state.counter+1});
+  }
 
   render(){
-    const styles={
-      border:'solid',
-      textAlign:'center',
-      boxShadow:'2px 2px'
-    }
+
     return (
       <div className="App">
-      <div style={styles}>Style
-      </div>
-      <button>Button 1 </button>
-      react {this.name} 
-
+      <button onClick={() => this.increment()}>Increment</button>
+      <div>Div 1 {this.state.counter}</div>
       </div>
     );
   } 
 }
 
 
-const Appinstanse = new App();
-console.log(Appinstanse.name)
+
 export default App;
