@@ -1,20 +1,24 @@
 import React, {Component} from 'react';
 class App extends Component {
   
-  state = { 
-    counter: 0
-  }
-
-  increment =() => {
-    this.setState({counter: this.state.counter+1});
-  }
-
+ 
   render(){
 
+    const var1 = {
+      key1:" Nirodha",
+      Key2:"Madhubhashana "
+    }
     return (
       <div className="App">
-      <button onClick={() => this.increment()}>Increment</button>
-      <div>Div 1 {this.state.counter}</div>
+     {React.createElement(
+       'div',
+       {className :"app"},
+      var1.key1
+     )}
+
+     <div>
+       {var1.Key2}
+     </div>
       </div>
     );
   } 
